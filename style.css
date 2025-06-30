@@ -61,6 +61,10 @@ a:hover {
 
 section {
     padding: 60px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+section:last-of-type {
+    border-bottom: none;
 }
 
 /* --- Sidebar Styling --- */
@@ -102,6 +106,7 @@ section {
     font-size: 0.95em;
     border-radius: 6px;
     margin-bottom: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 .main-nav li a:hover,
 .main-nav li a.active {
@@ -146,8 +151,9 @@ section {
 .hero-text p { font-size: 1.4em; color: #6c757d; max-width: 600px; }
 
 .research-category { margin-bottom: 40px; }
+.research-category h3 { font-size: 1.3em; display: flex; align-items: center; }
 .research-category h3 i { margin-right: 12px; color: #0d6efd; }
-.research-list { list-style-type: none; padding-left: 0; }
+.research-list { list-style-type: none; padding-left: 0; margin-top: 20px; }
 .research-list li { padding: 10px 0 10px 20px; border-left: 3px solid #dee2e6; margin-bottom: 12px; transition: border-color 0.2s ease; }
 .research-list li:hover { border-left-color: #0d6efd; }
 .research-list li b { color: #212529; }
