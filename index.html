@@ -5,178 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saeed Mohsenian | Computational Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <!-- =========== HEADER & BIO =========== -->
-        <header>
+    <!-- =========== SIDEBAR (LEFT MENU) =========== -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
             <img src="profile.jpg" alt="Saeed Mohsenian" class="profile-pic">
             <h1>Saeed Mohsenian</h1>
-            <h2>Computational Engineer | CFD, Multiphysics & Thermal Systems</h2>
-            
-            <div class="contact-links">
-                <a href="mailto:Saeed.mohsenian33@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://scholar.google.com/citations?user=wPNiDeoAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                <a href="https://www.linkedin.com/in/saeed-mohsenian-543355262/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
+            <p>Computational Engineer</p>
+        </div>
 
-            <a href="Saeed_Mohsenian_CV.pdf" class="button" target="_blank">Download CV</a>
-        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about" class="active">About Me</a></li>
+                <li><a href="#research">Research Areas</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#skills">Technical Skills</a></li>
+                <li><a href="#cv">My CV</a></li>
+            </ul>
+        </nav>
 
-        <!-- =========== ABOUT ME =========== -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Mechanical and Bioengineering professional driven by a passion for using high-fidelity simulation to solve complex, real-world problems. My journey began with a deep dive into thermal-fluid sciences, optimizing automotive cooling systems with CFD. This practical, hardware-focused experience taught me how to bridge the gap between a digital model and a physical product.
+        <div class="sidebar-footer">
+            <div id="connect">
+                <h3>Connect</h3>
+                <a href="mailto:saeed.mohsenian33@gmail.com" class="connect-link"><i class="fas fa-envelope"></i> saeed.mohsenian33...</a>
+                <a href="mailto:mohseniankoochaksa.s@northeastern.edu" class="connect-link"><i class="fas fa-university"></i> mohseniankoochaksa.s...</a>
+                <a href="https://www.linkedin.com/in/saeed-mohsenian-5433552 work, which led to multiple first-author publications, solidified my expertise in multiphysics modeling and fluid-structure interaction. Today, I am passionate about using this unique, cross-disciplinary background to create innovative solutions for the next generation of technology.
             </p>
-            <p>
-                Seeking a new challenge, I pivoted to the biomedical field, applying the same core engineering principles to model the intricate fluid dynamics of the human body. As a researcher and at Biogen, I developed sophisticated CFD models for drug delivery and CSF flow, leading to multiple first-author publications. Today, I am eager to apply my unique, cross-disciplinary experience to innovative engineering challenges in thermal management, energy, or advanced transportation.
-            </p>
         </section>
+        
+        <!-- RESEARCH AREAS SECTION -->
+        <section id="research">
+            <h2>Research Areas</h2>
 
-        <!-- =========== SKILLS =========== -->
-        <section id="skills">
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>CFD & Thermal Analysis</h3>
-                    <ul>
-                        <li>Star-CCM+</li>
-                        <li>ANSYS Fluent</li>
-                        <li>SIMULIA (Abaqus)</li>
-                        <li>Multiphysics & FSI</li>
-                        <li>Turbulence & Multiphase Flow</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>CAD & Meshing</h3>
-                    <ul>
-                        <li>SolidWorks</li>
-                        <li>CATIA V5/V6</li>
-                        <li>ICEM CFD & Gambit</li>
-                        <li>ITK-SNAP & ImageJ</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Programming & Automation</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>MATLAB</li>
-                        <li>Fortran</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
+            <div class="research-category">
+                <h3><i class="fas fa-cogs"></i> Mechanical Engineering / Heat Transfer / Fluid Dynamics</h3>
+                <h4>Core Areas:</h4>
+                <ul class="research-list">
+                    <li><b>Multiphase Flow Modeling:</b> Gas-liquid and liquid-solid transport in industrial or biomedical systems; Nanofluid dynamics using Eulerian/Lagrangian models.</li>
+                    <li><b>Thermal Management & Heat Transfer:</b> Passive and active thermal systems for electronics; Microscale and nanoscale heat transfer; Radiative and convective transport.</li>
+                    <li><b>Vortex Dynamics & Transient Fluid Mechanics:</b> Unsteady, high-energy-density flow phenomena; Pulsatile or oscillatory flows for mixing and transport.</li>
+                    <li><b>CFD & Optimization:</b> Turbulence modeling (RANS/LES), non-Newtonian flow; Design optimization using metaheuristics; Inverse problems.</li>
+                    <li><b>Energy Systems:</b> Solar energy systems and thermal storage; Waste heat recovery and optimization of renewable energy devices.</li>
+                    <li><b>Magnetohydrodynamics (MHD):</b> Nano- and microfluidic systems subjected to magnetic/electric fields.</li>
+                    <li><b>Advanced Cooling Techniques:</b> Heat sink design with nanofluids; Phase-change materials and microchannel cooling.</li>
+                </ul>
             </div>
-        </section>
 
-        <!-- =========== EXPERIENCE =========== -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Biogen</h3>
-                <p class="job-title">Product Modeling Scientist | 07/2023 – 07/2024</p>
-                <ul>
-                    <li>Led CFD modeling of CNS drug delivery, simulating fluid-structure interaction, tissue motion, and drug diffusion.</li>
-                    <li>Designed and assessed 10+ injection device concepts to optimize drug distribution using Ansys Fluent.</li>
+            <div class="research-category">
+                <h3><i class="fas fa-dna"></i> Biomedical Engineering / Biotransport / Soft Tissue Mechanics</h3>
+                <h4>Core Areas:</h4>
+                <ul class="research-list">
+                    <li><b>CSF Hydrodynamics and Brain Biomechanics:</b> Simulation of CSF flow in normal and pathological states; Brain-tissue deformation and intracranial pressure dynamics.</li>
+                    <li><b>Image-Based Modeling:</b> 3D reconstruction of anatomical regions from MRI data for personalized FSI and transport simulations.</li>
+                    <li><b>Soft Tissue Biomechanics:</b> Modeling of deformation, viscoelasticity, and mechanical stress in soft tissues; Host-biomaterial interaction.</li>
+                    <li><b>Biotransport Phenomena:</b> Diffusion and convection of therapeutic agents through porous and deforming biological tissues.</li>
+                    <li><b>Fluid-Structure Interaction (FSI):</b> Coupling between flow and tissue deformation in cardiovascular or central nervous systems.</li>
+                    <li><b>Computational Modeling of Medical Devices:</b> CFD-driven design and analysis of injection needles, catheters, and implants.</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Northeastern University</h3>
-                <p class="job-title">Research Assistant | 01/2022 – 01/2025</p>
-                <ul>
-                    <li>Built and validated 100+ CFD models of CSF flow using patient-specific, MRI-derived anatomy.</li>
-                    <li>Developed a GUI-based MATLAB tool to automate simulation setup, reducing analysis time by 30%.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Parsian Pharmaceutical Company</h3>
-                <p class="job-title">Product Modeling Scientist | 05/2017 – 01/2021</p>
-                <ul>
-                    <li>Optimized fluid dynamics and mixing in bioreactors and fill-finish systems to improve drug uniformity.</li>
-                    <li>Designed and simulated high-precision injector components in CATIA to enhance dose accuracy.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Manufacturing Company</h3>
-                <p class="job-title">Thermal Engineer & CAD Designer | 01/2013 – 05/2017</p>
-                <ul>
-                    <li>Led the CFD-driven design of automotive radiators and intercoolers, improving thermal efficiency by 20%.</li>
-                    <li>Validated CFD predictions against experimental wind tunnel data to ensure model accuracy.</li>
-                </ul>
-            </div>
-        </section>
 
-        <!-- =========== PROJECTS =========== -->
-        <section id="projects">
-            <h2>Selected Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="project-radiator.jpg" alt="Automotive Radiator CFD">
-                    <div class="project-content">
-                        <h3>High-Efficiency Automotive Radiator</h3>
-                        <p>Led the end-to-end design of an automotive radiator. Used Ansys Fluent to optimize fin geometry, validated results with physical testing, and improved heat transfer efficiency.</p>
-                        <div class="project-tools">
-                            <span>Ansys Fluent</span>
-                            <span>SolidWorks</span>
-                            <span>CHT Analysis</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="project-csf.jpg" alt="CSF Flow Modeling">
-                    <div class="project-content">
-                        <h3>CSF Flow Modeling in Chiari Malformation</h3>
-                        <p>Developed patient-specific CFD models from MRI scans to understand the relationship between tissue motion and CSF dynamics, generating clinically actionable insights.</p>
-                        <div class="project-tools">
-                            <span>ITK-SNAP</span>
-                            <span>MATLAB</span>
-                            <span>ANSYS Fluent</span>
-                            <span>FSI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="project-bioreactor.jpg" alt="Bioreactor Fluid System">
-                    <div class="project-content">
-                        <h3>Bioreactor Fluid System Optimization</h3>
-                        <p>Redesigned bioreactor internals to improve mixing efficiency and reduce fluid resistance. The simulation-guided design lowered manufacturing costs and improved drug uniformity.</p>
-                        <div class="project-tools">
-                            <span>CATIA</span>
-                            <span>ANSYS Fluent</span>
-                            <span>Multiphase Flow</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="project-cpu.jpg" alt="CPU Heat Sink">
-                    <div class="project-content">
-                        <h3>CPU Heat Sink with Nanofluid Cooling</h3>
-                        <p>Investigated and optimized the design of a CPU heat sink cooled by an alumina-water nanofluid, significantly improving cooling efficiency over traditional methods.</p>
-                        <div class="project-tools">
-                            <span>Ansys Fluent</span>
-                            <span>Thermal Analysis</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="research-category">
+                <h3><i class="fas fa-project-diagram"></i> Cross-Disciplinary Themes / Emerging Areas</h3>
+                <h4>Core Areas:</h4>
+                <ul class="research-list">
+                    <li><b>Multiphysics Coupling:</b> Integrated modeling of heat, mass, momentum, and tissue mechanics in complex systems.</li>
+                    <li><b>Experimental-Computational Hybrid Methodologies:</b> Validating CFD results with MRI, ultrasound, or laboratory data to create predictive digital twins.</li>
+                </ul>
             </div>
         </section>
         
-        <!-- =========== PUBLICATIONS =========== -->
+        <!-- PUBLICATIONS SECTION -->
         <section id="publications">
-            <h2>Publications & Scholarly Work</h2>
+            <h2>My Scholarly Publications</h2>
             <p>
-                I am passionate about contributing to the scientific community. For a complete and up-to-date list of my peer-reviewed publications, please visit my Google Scholar profile.
+                I am committed to advancing science through rigorous research and peer-reviewed publication. For a complete and up-to-date list of my work, please visit my Google Scholar profile.
             </p>
             <a href="https://scholar.google.com/citations?user=wPNiDeoAAAAJ&hl=en" class="button" target="_blank">View on Google Scholar</a>
         </section>
 
-        <!-- =========== FOOTER =========== -->
-        <footer>
-            <p>© 2024 Saeed Mohsenian. All rights reserved.</p>
-        </footer>
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Computational Modeling</h3>
+                    <ul><li>Star-CCM+</li><li>ANSYS Fluent</li><li>SIMULIA</li><li>Moving Boundary Conditions</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CAD & Meshing</h3>
+                    <ul><li>SolidWorks</li><li>CATIA</li><li>ICEM CFD</li><li>Gambit</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Data</h3>
+                    <ul><li>MATLAB</li><li>Python (Pandas, Jupyter, SciPy)</li><li>Fortran</li><li>SQL</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Simulation Expertise</h3>
+                    <ul><li>FSI Modeling</li><li>Multiphase Transport</li><li>Soft Tissue Mechanics</li><li>Brain/CSF Biomechanics</li><li>Inverse Problems</li></ul>
+                </div>
+            </div>
+        </section>
 
     </div>
 
