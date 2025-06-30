@@ -1,84 +1,220 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saeed Mohsenian</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saeed Mohsenian | Personal Website</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+        }
+        
+        /* Style for the section headers */
+        .section-header {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* bold */
+            color: #1e293b; /* slate-800 */
+            margin-bottom: 2rem; /* mb-8 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            border-bottom: 2px solid #e2e8f0; /* border-slate-200 */
+        }
+
+        /* Sidebar navigation link styling */
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            transition: all 0.2s ease-in-out;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background-color: #e2e8f0; /* slate-200 */
+            color: #1e293b; /* slate-800 */
+        }
+
+        /* Prevent content from being hidden by a potential sticky header on jump */
+        section {
+            scroll-margin-top: 4rem;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Saeed Mohsenian</h1>
-    <p>CFD Engineer | Bioengineer | Simulation Specialist</p>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#research">Research Areas</a>
-      <a href="#connect">Connect</a>
-      <a href="#publications">Publications</a>
-    </nav>
-  </header>
+<body class="bg-slate-100 text-slate-700">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a recent M.S. Bioengineering graduate from Northeastern University with a strong background in Computational Fluid Dynamics (CFD), thermal analysis, and biomechanical system modeling. My experience spans both academic and industry settings, including a one-year internship at Biogen where I built CFD models of CNS drug dispersion. 
-    </p>
-    <p>
-      My work integrates advanced CAD modeling, numerical simulation, and multidisciplinary problem-solving in biomedical and mechanical systems. I’ve used tools such as Ansys Fluent, Star-CCM+, SolidWorks, and MATLAB to address complex challenges in CSF hydrodynamics, brain biomechanics, thermal systems, and drug delivery optimization.
-    </p>
-  </section>
+    <div class="relative min-h-screen md:flex">
 
-  <section id="research">
-    <h2>Research Areas</h2>
-    <ul>
-      <li><strong>Multiphase Flow Modeling and Simulation:</strong> Gas-liquid/solid transport, nanofluid dynamics, two-phase flows.</li>
-      <li><strong>Thermal Management & Heat Transfer:</strong> Microscale systems, fins, radiators, and solar thermal transport.</li>
-      <li><strong>Vortex Dynamics & Transient Flow:</strong> Pulsatile, unsteady flows in confined/biomedical systems.</li>
-      <li><strong>CFD & Optimization:</strong> Turbulence modeling, non-Newtonian flow, metaheuristic design optimization.</li>
-      <li><strong>Energy Systems & Sustainability:</strong> Thermal storage, waste heat recovery, solar energy devices.</li>
-      <li><strong>MHD & Electrically-Driven Flow:</strong> Microfluidic systems using magnetic and electric fields.</li>
-      <li><strong>Advanced Cooling Techniques:</strong> Nanofluid heat sinks, phase change cooling, microchannel design.</li>
-      <li><strong>CSF Hydrodynamics & Brain Biomechanics:</strong> Simulation of CSF flow, brain deformation, drug delivery.</li>
-      <li><strong>Image-Based Tissue Modeling:</strong> MRI-based reconstruction, anatomical modeling using ITK-SNAP.</li>
-      <li><strong>Soft Tissue Biomechanics:</strong> Stress/strain modeling in tissues, implant-tissue fluid interactions.</li>
-      <li><strong>Biotransport Phenomena:</strong> Diffusion/convection in porous and deformable biological media.</li>
-      <li><strong>Fluid-Structure Interaction:</strong> FSI in the cardiovascular/neurological system and implants.</li>
-      <li><strong>Medical Device Modeling:</strong> CFD analysis of catheters, implants, and therapeutic delivery tools.</li>
-      <li><strong>Biomedical Nanofluidics:</strong> Microchannel drug delivery, nanofiber scaffolds for tissue engineering.</li>
-      <li><strong>Multiphysics Coupling:</strong> Heat, mass, momentum, and tissue mechanics in complex systems.</li>
-      <li><strong>Hybrid Experimental-CFD:</strong> Validation of simulations using MRI, ultrasound, or lab data.</li>
-    </ul>
-  </section>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex justify-between items-center p-4 bg-white border-b border-slate-200">
+            <a href="#" class="text-xl font-bold text-slate-800">Saeed Mohsenian</a>
+            <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
 
-  <section id="connect">
-    <h2>Connect</h2>
-    <p>Personal Email: <a href="mailto:saeed.mohsenian33@gmail.com">saeed.mohsenian33@gmail.com</a></p>
-    <p>Northeastern Email: <a href="mailto:mohseniankoochaksa.s@northeastern.edu">mohseniankoochaksa.s@northeastern.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/saeed-mohsenian-543355262/" target="_blank">Profile</a></p>
-    <p>My CV: <a href="#">Download (Coming Soon)</a></p>
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-white text-slate-600 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out z-30 md:flex md:flex-col md:w-1/4 lg:w-1/5 md:h-screen md:fixed md:border-r md:border-slate-200">
+            
+            <div class="px-6 py-4 flex flex-col h-full">
+                <!-- Profile Section -->
+                <div>
+                    <h1 class="text-3xl font-bold text-slate-900">Saeed Mohsenian</h1>
+                    <p class="mt-2 text-md text-slate-500">CFD & Biomedical Simulation Specialist</p>
+                </div>
 
-    <h3>Technical Skills</h3>
-    <ul>
-      <li><strong>Computational Modeling:</strong> Star-CCM+, ANSYS Fluent, SIMULIA, Moving Boundary Conditions</li>
-      <li><strong>CAD & Meshing:</strong> SolidWorks, CATIA, ICEM CFD, Gambit</li>
-      <li><strong>Programming:</strong> MATLAB, Python, Fortran, Maple, SQL, Pandas, NumPy, Matplotlib, Jupyter, SciPy</li>
-      <li><strong>Other Tools:</strong> SigmaPlot, GetData Graph Digitizer, ITK-SNAP, ImageJ</li>
-      <li><strong>Simulation Expertise:</strong> FSI, multiphase transport, inverse problems, brain/CSF modeling</li>
-    </ul>
-  </section>
+                <!-- Navigation -->
+                <nav class="mt-10">
+                    <a href="#about" class="nav-link">About Me</a>
+                    <a href="#research" class="nav-link">Research</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#skills" class="nav-link">Technical Skills</a>
+                </nav>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <p>
-      <a href="https://scholar.google.com/citations?user=wPNiDeoAAAAJ&hl=en" target="_blank">
-        My Scholarly Publications
-      </a>
-    </p>
-  </section>
+                <!-- Spacer to push connect links to the bottom -->
+                <div class="flex-grow"></div>
 
-  <footer>
-    <p>© 2025 Saeed Mohsenian</p>
-  </footer>
+                <!-- Connect Links -->
+                <div class="mt-10">
+                    <h3 class="px-4 text-sm font-semibold text-slate-500 uppercase tracking-wider">Connect</h3>
+                    <div class="mt-2 space-y-2">
+                        <a href="https://www.linkedin.com/in/saeed-mohsenian-543355262/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-md hover:bg-slate-100">
+                            <i class="fa-brands fa-linkedin text-xl w-6 text-center"></i> <span>LinkedIn</span>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=wPNiDeoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-md hover:bg-slate-100">
+                            <i class="fa-solid fa-graduation-cap text-xl w-6 text-center"></i> <span>Google Scholar</span>
+                        </a>
+                        <a href="mailto:saeed.mohsenian33@gmail.com" class="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-md hover:bg-slate-100">
+                            <i class="fa-solid fa-envelope text-xl w-6 text-center"></i> <span>Email</span>
+                        </a>
+                        <a href="./Saeed_Mohsenian_CV.pdf" download="Saeed_Mohsenian_CV.pdf" class="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors p-2 rounded-md hover:bg-slate-100">
+                            <i class="fa-solid fa-file-arrow-down text-xl w-6 text-center"></i> <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+                 <p class="mt-6 text-center text-xs text-slate-400">&copy; <span id="current-year"></span> Saeed Mohsenian</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-12 md:ml-[25%] lg:ml-[20%]">
+            <!-- About Me Section -->
+            <section id="about" class="mb-16">
+                <h2 class="section-header">About Me</h2>
+                <div class="space-y-4 text-lg text-slate-600">
+                    <p>
+                        I am a recent Master of Science graduate in Bioengineering from Northeastern University, specializing in computational fluid dynamics (CFD), thermal analysis, and biomechanics. My professional background includes a comprehensive one-year internship at <strong>Biogen</strong>, where I developed and executed over 50 high-fidelity CFD simulations to model drug dispersion within the central nervous system. This work was instrumental in supporting translational modeling, informing pharmacokinetic (PK) predictions, and optimizing the design of novel drug delivery devices.
+                    </p>
+                    <p>
+                        My expertise lies in using advanced simulation tools like <strong>Ansys Fluent</strong>, <strong>Star-CCM+</strong>, and <strong>SIMULIA</strong> to tackle complex engineering challenges. I have a proven track record of converting medical imaging data (MRI) into precise CAD models for simulation, significantly improving model fidelity and generating clinically relevant insights. Before my focus on bioengineering, I built a strong foundation in thermal-fluid sciences, optimizing heat transfer systems and enhancing energy efficiency in industrial applications.
+                    </p>
+                    <p>
+                        I am passionate about leveraging multiphysics modeling to bridge the gap between computational analysis and real-world outcomes. I am eager to contribute my skills in simulation-driven design and analysis to an innovative team focused on solving impactful engineering problems.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Research Area Section -->
+            <section id="research" class="mb-16">
+                <h2 class="section-header">Research Area</h2>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Mechanical / Thermal-Fluid Sciences</h3>
+                        <ul class="space-y-4 list-disc list-inside">
+                            <li><strong>Multiphase Flow Modeling:</strong> Gas-liquid/liquid-solid transport, nanofluid dynamics.</li>
+                            <li><strong>Thermal Management:</strong> Passive/active systems, micro/nanoscale heat transfer.</li>
+                            <li><strong>Vortex & Transient Dynamics:</strong> Unsteady, high-energy-density flow, pulsatile flows.</li>
+                            <li><strong>CFD & Optimization:</strong> Turbulence modeling, non-Newtonian flow, inverse problems.</li>
+                            <li><strong>Advanced Cooling:</strong> Heat sinks, phase-change materials, microchannel cooling.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h3 class="text-2xl font-semibold text-green-700 mb-4">Bio-fluidics & Biomechanics</h3>
+                        <ul class="space-y-4 list-disc list-inside">
+                            <li><strong>CSF & Brain Hydrodynamics:</strong> CSF flow simulation, brain-tissue deformation.</li>
+                            <li><strong>Image-Based Modeling:</strong> 3D reconstruction from MRI data for personalized simulation.</li>
+                            <li><strong>Soft Tissue Biomechanics:</strong> Deformation, viscoelasticity, and mechanical stress modeling.</li>
+                            <li><strong>Biotransport Phenomena:</strong> Diffusion and convection of therapeutic agents.</li>
+                            <li><strong>Fluid-Structure Interaction (FSI):</strong> Coupling flow and tissue deformation in biomedical systems.</li>
+                            <li><strong>Medical Device Modeling:</strong> CFD-driven design of needles, catheters, and implants.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="mb-16 text-center">
+                 <h2 class="section-header">Publications</h2>
+                 <p class="text-lg mb-6">A complete list of my work is available on Google Scholar.</p>
+                 <a href="https://scholar.google.com/citations?user=wPNiDeoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg">
+                    <i class="fa-solid fa-book-open mr-2"></i> View Publications
+                 </a>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section id="skills" class="mb-16">
+                <h2 class="section-header">Technical Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Computational Modeling</h4>
+                        <p>Star-CCM+, ANSYS Fluent, SIMULIA, Moving Boundary Conditions</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">CAD & Meshing</h4>
+                        <p>SolidWorks, CATIA, ICEM CFD, Gambit</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Programming & Data</h4>
+                        <p>MATLAB, Python (Pandas, Jupyter, SciPy), Fortran, Maple, SQL</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Image & Data Tools</h4>
+                        <p>ITK-SNAP, ImageJ, SigmaPlot, GetData Graph Digitizer</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 sm:col-span-2">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Simulation Expertise</h4>
+                        <p>FSI modeling, multiphase and soft tissue transport, inverse problems, brain/CSF hydrodynamics, turbulence models, non-Newtonian flow.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const navLinks = sidebar.querySelectorAll('a.nav-link');
+
+        btn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+        
+        // Close the mobile menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (sidebar.classList.contains('-translate-x-full') === false) {
+                     sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
