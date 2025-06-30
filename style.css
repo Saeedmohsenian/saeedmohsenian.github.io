@@ -1,236 +1,249 @@
-/* =========== GENERAL STYLES =========== */
+/* --- Global Styles & Fonts --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #495057;
+    display: flex;
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: #1a237e; /* Dark Blue */
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    color: #343a40;
+    font-weight: 700;
 }
 
 h2 {
     font-size: 2em;
-    border-bottom: 3px solid #3949ab; /* Medium Blue */
+    border-bottom: 3px solid #007bff;
     padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 1.4em;
-    color: #303f9f; /* Lighter Blue */
+    color: #007bff;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #343a40;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 a {
-    color: #3949ab;
+    color: #007bff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #0056b3;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/* =========== HEADER =========== */
-header {
+/* --- Main Layout: Sidebar + Main Content --- */
+.sidebar {
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 30px;
     text-align: center;
-    padding: 40px 0;
-    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.profile-pic {
+.main-content {
+    margin-left: 300px;
+    padding: 40px 60px;
+    width: calc(100% - 300px);
+    box-sizing: border-box;
+}
+
+section {
+    padding: 40px 0 60px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    margin: 0 auto 10px auto;
 }
 
-header h2 {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #555;
-    border: none;
+.sidebar h1 {
+    font-size: 1.6em;
     margin: 0;
 }
 
-.contact-links {
-    margin: 20px 0;
+.sidebar .sidebar-subtitle {
+    font-size: 1em;
+    color: #6c757d;
+    margin-top: 5px;
 }
 
-.contact-links a {
-    margin: 0 15px;
-    font-size: 1.1em;
-    color: #555;
+.sidebar .main-nav {
+    margin-top: 25px;
+    text-align: left;
 }
 
-.contact-links a:hover {
-    color: #1a237e;
-    text-decoration: none;
+.sidebar .main-nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.contact-links .fas, .contact-links .fab {
-    margin-right: 8px;
-    color: #3949ab;
+.sidebar .main-nav li a {
+    display: block;
+    padding: 10px 15px;
+    color: #495057;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.sidebar .main-nav li a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.sidebar-connect {
+    margin-top: auto; /* Pushes content below to the bottom */
+    text-align: left;
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+}
+
+.sidebar-connect h3 {
+    margin-top: 0;
+}
+
+.sidebar-connect p, .sidebar-connect a {
+    font-size: 0.9em;
+    color: #6c757d;
+    word-wrap: break-word; /* Prevents long emails from overflowing */
+}
+.sidebar-connect i {
+    margin-right: 10px;
+    width: 15px; /* Aligns the text */
+}
+
+.sidebar .sidebar-footer {
+    padding-top: 20px;
+    font-size: 0.8em;
+    color: #adb5bd;
 }
 
 .button {
     display: inline-block;
-    background-color: #3949ab;
+    background-color: #007bff;
     color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
 }
-
 .button:hover {
-    background-color: #1a237e;
-    text-decoration: none;
+    background-color: #0056b3;
+    color: #fff;
 }
 
-/* =========== SECTIONS =========== */
-section {
-    padding: 20px 0;
+/* --- Main Content Styling --- */
+.hero-text {
+    padding-bottom: 40px;
 }
 
-#about p {
-    font-size: 1.1em;
-    text-align: justify;
+.hero-text h1 {
+    font-size: 3.5em;
+    font-weight: 800;
 }
 
-/* =========== SKILLS =========== */
+.hero-text p {
+    font-size: 1.4em;
+    color: #6c757d;
+}
+
+.research-category {
+    margin-bottom: 40px;
+}
+
+.research-category h3 i {
+    margin-right: 15px;
+}
+
+.research-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.research-list li {
+    padding: 8px 0 8px 15px;
+    border-left: 3px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+.research-list li b {
+    color: #343a40;
+}
+
+#publications { text-align: center; }
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.skill-category ul {
-    padding-left: 0;
-    list-style-type: none;
-}
+.skill-category { padding: 15px; border: 1px solid #e9ecef; border-radius: 5px; }
+.skill-category h3 { margin-top: 0; font-size: 1.2em; }
+.skill-category ul { list-style: none; padding: 0; }
+.skill-category li { background-color: #e9ecef; color: #495057; padding: 8px 12px; border-radius: 5px; margin-bottom: 8px; font-size: 0.9em; }
 
-.skill-category li {
-    background-color: #e8eaf6;
-    padding: 8px 12px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
 
-/* =========== EXPERIENCE =========== */
-.experience-item {
-    margin-bottom: 30px;
-    padding-left: 20px;
-    border-left: 3px solid #3949ab;
-}
+/* --- Responsive Design for Smaller Screens --- */
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+    }
 
-.experience-item h3 {
-    margin-top: 0;
-}
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .sidebar .main-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.job-title {
-    font-weight: bold;
-    color: #555;
-    margin-top: -10px;
-}
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 30px;
+    }
 
-/* =========== PROJECTS =========== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.project-content {
-    padding: 20px;
-}
-
-.project-content p {
-    font-size: 0.95em;
-}
-
-.project-tools {
-    margin-top: 15px;
-}
-
-.project-tools span {
-    display: inline-block;
-    background-color: #303f9f;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.8em;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-/* =========== PUBLICATIONS & FOOTER =========== */
-#publications {
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #e0e0e0;
-    font-size: 0.9em;
-    color: #777;
-}
-
-/* =========== RESPONSIVENESS =========== */
-@media (max-width: 768px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.6em; }
-    .container { padding: 15px; }
-    .contact-links a { display: block; margin: 10px 0; }
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
 }
